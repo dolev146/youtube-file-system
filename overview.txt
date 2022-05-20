@@ -1,0 +1,17 @@
+
+
+FS structue is as follows:
+
+superblock
+    write
+    read
+inode
+    write
+    read
+block
+    write
+    read
+file
+    write
+    read
+
