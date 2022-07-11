@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "fs.h"
+#include <string.h>
 
 void main()
 {
@@ -47,11 +48,13 @@ void main()
     // allocate_file("first");
     int file = allocate_file("another");
     set_filesize(file, 5000);
+    char yakov[] = "why are you gay?";
+    
     char data = 'b';
     int i;
-    for (i = 0; i < 49; i++)
+    for (i = 0; i < 16; i++)
     {
-        write_byte(file, i * 100, &data);
+        write_byte(file, i , &yakov[i]);
     }
 
     sync_fs();
